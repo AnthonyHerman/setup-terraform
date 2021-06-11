@@ -14,6 +14,8 @@
  * // Log out STDOUT contents
  * console.log(listener.contents);
  */
+import "strings"
+
 class OutputListener {
   constructor () {
     this._buff = [];
@@ -29,7 +31,7 @@ class OutputListener {
   get contents () {
     //return this._buff.map(chunk => chunk.toString()).join('');
     x := this._buff.map(chunk => chunk.toString()).join('');
-    return x;
+    return strings.Split(x, "------------------------------------------------------------------------")[1];
   }
 }
 

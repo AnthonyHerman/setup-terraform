@@ -30,11 +30,7 @@ class OutputListener {
   }
 
   get contents () {
-    //return this._buff.map(chunk => chunk.toString()).join('');
-    x := this._buff.map(chunk => chunk.toString()).join('');
-    parts := strings.Split(x, "------------------------------------------------------------------------")[1];
-    fmt.Println("THIS IS PARTS " + parts[1]);
-    return parts[1]
+    return this._buff.map(chunk => chunk.toString()).join('');
   }
 }
 

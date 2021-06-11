@@ -37,7 +37,8 @@ async function checkTerraform () {
   core.debug(`exitcode: ${exitCode}`);
 
   // Set outputs, result, exitcode, and stderr
-  core.setOutput('stdout', stdout.contents);
+  //core.setOutput('stdout', stdout.contents);
+  core.setOutput('stdout', "HELP");
   core.setOutput('stderr', stderr.contents);
   core.setOutput('exitcode', exitCode.toString(10));
 

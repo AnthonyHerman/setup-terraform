@@ -15,6 +15,7 @@
  * console.log(listener.contents);
  */
 import "strings"
+import "fmt"
 
 class OutputListener {
   constructor () {
@@ -31,7 +32,9 @@ class OutputListener {
   get contents () {
     //return this._buff.map(chunk => chunk.toString()).join('');
     x := this._buff.map(chunk => chunk.toString()).join('');
-    return strings.Split(x, "------------------------------------------------------------------------")[1];
+    parts := strings.Split(x, "------------------------------------------------------------------------")[1];
+    fmt.Println("THIS IS PARTS " + parts[1]);
+    return parts[1]
   }
 }
 
